@@ -1,0 +1,30 @@
+{
+  "name": "obsidian-tarot-decks",
+  "version": "1.0.0",
+  "description": "Public domain divination decks for Obsidian Tarot Practice plugin",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build-zips": "node scripts/build-zips.js",
+    "validate": "node scripts/validate-all.js",
+    "clean": "rm -rf releases/*.zip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/w8s/obsidian-tarot-decks.git"
+  },
+  "keywords": [
+    "obsidian",
+    "tarot",
+    "divination",
+    "oracle",
+    "lenormand",
+    "runes",
+    "i-ching"
+  ],
+  "author": "w8s",
+  "license": "Public Domain",
+  "devDependencies": {
+    "archiver": "^7.0.1"
+  }
+}

@@ -1,0 +1,53 @@
+name: Release Decks
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Validate decks
+        run: npm run validate
+      
+      - name: Build ZIP files
+        run: npm run build-zips
+      
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: releases/*.zip
+          body: |
+            ## Public Domain Divination Decks
+            
+            Download the deck ZIPs below and install via:
+            1. Obsidian → Settings → Tarot Practice → Deck Management
+            2. Click "Add deck"
+            3. Select the downloaded ZIP file
+            
+            ### Available Decks
+            
+            - **elder-futhark.zip** - 24 Norse runes (2nd-8th century CE)
+            - **lenormand.zip** - 36 French cartomancy cards (early 1800s)
+            - **playing-cards.zip** - 52 standard playing cards (medieval Europe)
+            - **i-ching.zip** - 64 Chinese oracle hexagrams (3000+ years old)
+            
+            All decks are public domain and freely usable.
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
