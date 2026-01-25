@@ -2,7 +2,7 @@
   "id": "playing-cards",
   "name": "Playing Card Cartomancy",
   "description": "Standard 52-card deck used for cartomancy (fortune telling with playing cards). This practice dates back to 14th century Europe and was popularized in the 18th-19th centuries.",
-  "sourceUrl": "https://github.com/w8s/obsidian-tarot-decks/releases/download/v1.0.1/playing-cards.zip",
+  "sourceUrl": "https://github.com/w8s/obsidian-tarot-decks/releases/download/v1.0.2/playing-cards.zip",
   "cards": [
     { "index": 0, "name": "Ace of Hearts", "category": "Hearts", "suit": "Hearts", "rank": "Ace", "value": 1 },
     { "index": 1, "name": "2 of Hearts", "category": "Hearts", "suit": "Hearts", "rank": "2", "value": 2 },

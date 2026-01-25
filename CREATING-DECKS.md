@@ -31,7 +31,7 @@ This guide shows you how to create your own divination decks for the Obsidian Ta
 {
   "description": "Brief description of this deck",
   "backImageUrl": "back.png",        // Path to deck back image
-  "sourceUrl": "https://github.com/w8s/obsidian-tarot-decks/releases/download/v1.0.0/elder-futhark.zip",  // Download URL for image restoration
+  "sourceUrl": "https://github.com/w8s/obsidian-tarot-decks/releases/download/v1.0.2/elder-futhark.zip",  // Download URL for image restoration
   "metadata": {
     "author": "Your Name",
     "year": 2025,
@@ -49,7 +49,7 @@ The `sourceUrl` field allows users to restore deck images if they're accidentall
 {
   "id": "elder-futhark",
   "name": "Elder Futhark Runes",
-  "sourceUrl": "https://github.com/w8s/obsidian-tarot-decks/releases/download/v1.0.0/elder-futhark.zip",
+  "sourceUrl": "https://github.com/w8s/obsidian-tarot-decks/releases/download/v1.0.2/elder-futhark.zip",
   "cards": [...]
 }
 ```
@@ -68,7 +68,7 @@ The `sourceUrl` field allows users to restore deck images if they're accidentall
 **Example for GitHub releases:**
 ```
 https://github.com/{username}/{repo}/releases/download/{tag}/{filename}.zip
-https://github.com/w8s/obsidian-tarot-decks/releases/download/v1.0.0/elder-futhark.zip
+https://github.com/w8s/obsidian-tarot-decks/releases/download/v1.0.2/elder-futhark.zip
 ```
 
 **When to use:**
