@@ -2,6 +2,7 @@
   "id": "lenormand-petit",
   "name": "Petit Lenormand",
   "description": "The traditional 36-card Lenormand deck, named after the famous fortune teller Mademoiselle Lenormand (1772-1843). Originally derived from the German 'Game of Hope' card game.",
+  "sourceUrl": "https://github.com/w8s/obsidian-tarot-decks/releases/download/v1.0.1/lenormand.zip",
   "cards": [
     { "index": 0, "name": "Rider", "category": "Lenormand", "suit": "Hearts", "rank": "9", "value": 1 },
     { "index": 1, "name": "Clover", "category": "Lenormand", "suit": "Diamonds", "rank": "6", "value": 2 },

@@ -31,6 +31,7 @@ This guide shows you how to create your own divination decks for the Obsidian Ta
 {
   "description": "Brief description of this deck",
   "backImageUrl": "back.png",        // Path to deck back image
+  "sourceUrl": "https://github.com/w8s/obsidian-tarot-decks/releases/download/v1.0.0/elder-futhark.zip",  // Download URL for image restoration
   "metadata": {
     "author": "Your Name",
     "year": 2025,
@@ -39,6 +40,41 @@ This guide shows you how to create your own divination decks for the Obsidian Ta
   }
 }
 ```
+
+### sourceUrl Field (Recommended)
+
+The `sourceUrl` field allows users to restore deck images if they're accidentally deleted:
+
+```json
+{
+  "id": "elder-futhark",
+  "name": "Elder Futhark Runes",
+  "sourceUrl": "https://github.com/w8s/obsidian-tarot-decks/releases/download/v1.0.0/elder-futhark.zip",
+  "cards": [...]
+}
+```
+
+**Benefits:**
+- Users can restore deleted images without re-importing the entire deck
+- "Restore images" button appears in deck details modal
+- No need to keep ZIP file after installation
+- Supports deck updates via new release URLs
+
+**URL requirements:**
+- Must be a direct download link to a ZIP file
+- Should be stable and permanent (use GitHub releases)
+- ZIP must contain same deck structure (deck.json + cards/)
+
+**Example for GitHub releases:**
+```
+https://github.com/{username}/{repo}/releases/download/{tag}/{filename}.zip
+https://github.com/w8s/obsidian-tarot-decks/releases/download/v1.0.0/elder-futhark.zip
+```
+
+**When to use:**
+- Always recommended for decks with images
+- Essential for community-shared decks
+- Optional for personal/private decks
 
 ### Tradition Types
 
@@ -260,6 +296,31 @@ Always include complete metadata:
   "license": "Public Domain"
 }
 ```
+
+### Image Recovery
+
+For decks with images, always include a `sourceUrl`:
+
+```json
+{
+  "id": "my-oracle",
+  "name": "My Oracle Deck",
+  "sourceUrl": "https://github.com/username/repo/releases/download/v1.0.0/my-oracle.zip",
+  "cards": [...]
+}
+```
+
+**Why this matters:**
+- Users can restore images if accidentally deleted
+- No need to keep original ZIP file
+- Supports future deck updates
+- Essential for community-shared decks
+
+**Setting up GitHub releases:**
+1. Create a release on GitHub: Tags → Create new release
+2. Upload your ZIP file as a release asset
+3. Right-click the download link and copy URL
+4. Add URL to deck.json as `sourceUrl`
 
 ### Documentation
 

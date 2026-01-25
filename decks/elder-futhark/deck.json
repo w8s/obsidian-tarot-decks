@@ -2,6 +2,7 @@
   "id": "elder-futhark",
   "name": "Elder Futhark Runes",
   "description": "The 24 runes of the Elder Futhark, the oldest form of the runic alphabets used by Germanic peoples from the 2nd to 8th centuries CE. Each rune represents both a sound and a concept.",
+  "sourceUrl": "https://github.com/w8s/obsidian-tarot-decks/releases/download/v1.0.1/elder-futhark.zip",
   "cards": [
     { "index": 0, "name": "Fehu", "category": "Freyr's Aett", "suit": null, "rank": null, "value": null },
     { "index": 1, "name": "Uruz", "category": "Freyr's Aett", "suit": null, "rank": null, "value": null },

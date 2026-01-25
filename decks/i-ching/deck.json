@@ -2,6 +2,7 @@
   "id": "i-ching",
   "name": "I Ching (Book of Changes)",
   "description": "The ancient Chinese divination system consisting of 64 hexagrams. Each hexagram is formed from six lines (either broken or unbroken) representing yin and yang. Dating back over 3,000 years.",
+  "sourceUrl": "https://github.com/w8s/obsidian-tarot-decks/releases/download/v1.0.1/i-ching.zip",
   "cards": [
     { "index": 0, "name": "1. The Creative (Ch'ien)", "category": "I Ching", "suit": null, "rank": null, "value": 1 },
     { "index": 1, "name": "2. The Receptive (K'un)", "category": "I Ching", "suit": null, "rank": null, "value": 2 },
