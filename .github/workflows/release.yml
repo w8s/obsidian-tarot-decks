@@ -32,7 +32,7 @@ jobs:
         run: npm run build-zips
       
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v3
         with:
           files: releases/*.zip
           body: |
