@@ -391,7 +391,7 @@ Study these for reference:
 
 - [JSON Format Documentation](https://www.json.org/)
 - [Obsidian Image Formats](https://help.obsidian.md/Linking+notes+and+files/Embed+files#Supported+file+formats)
-- [Tarot Practice Plugin Docs](https://github.com/w8s/obsidian-tarot-practice/blob/master/docs/TEMPLATE-VARIABLES.md)
+- [Tarot Practice Plugin Docs](https://github.com/w8s/obsidian-tarot-practice/blob/main/docs/TEMPLATE-VARIABLES.md)
 
 ## Need Help?
 
