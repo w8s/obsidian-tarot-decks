@@ -25,6 +25,6 @@
   "author": "w8s",
   "license": "Public Domain",
   "devDependencies": {
-    "archiver": "^7.0.1"
+    "archiver": "^8.0.0"
   }
 }
