@@ -29,7 +29,7 @@ async function validateDeck(deckName) {
     // Allowlist of known top-level fields — fail on unexpected keys
     const KNOWN_FIELDS = new Set([
       'id', 'name', 'description', 'cardCount', 'supportsReversals',
-      'isBuiltIn', 'sourceUrl', 'cards'
+      'isBuiltIn', 'sourceUrl', 'cards', 'metadata'
     ]);
     Object.keys(deck).forEach(key => {
       if (!KNOWN_FIELDS.has(key)) {
