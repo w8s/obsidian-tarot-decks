@@ -26,6 +26,17 @@ async function validateDeck(deckName) {
     const content = await readFile(deckPath, 'utf-8');
     const deck = JSON.parse(content);
     
+    // Allowlist of known top-level fields — fail on unexpected keys
+    const KNOWN_FIELDS = new Set([
+      'id', 'name', 'description', 'cardCount', 'supportsReversals',
+      'isBuiltIn', 'sourceUrl', 'cards'
+    ]);
+    Object.keys(deck).forEach(key => {
+      if (!KNOWN_FIELDS.has(key)) {
+        errors.push(`Unknown top-level field: "${key}" (not in allowlist)`);
+      }
+    });
+
     // Required fields
     if (!deck.id) errors.push('Missing required field: id');
     if (!deck.name) errors.push('Missing required field: name');
@@ -34,6 +45,16 @@ async function validateDeck(deckName) {
     if (typeof deck.cardCount !== 'number') errors.push('Missing required field: cardCount');
     if (typeof deck.supportsReversals !== 'boolean') errors.push('Missing required field: supportsReversals');
     if (typeof deck.isBuiltIn !== 'boolean') errors.push('Missing required field: isBuiltIn');
+
+    // sourceUrl must point to this repo's releases only
+    const TRUSTED_URL_PREFIX = 'https://github.com/w8s/obsidian-tarot-decks/releases/download/';
+    if (deck.sourceUrl !== undefined) {
+      if (typeof deck.sourceUrl !== 'string') {
+        errors.push('sourceUrl must be a string');
+      } else if (!deck.sourceUrl.startsWith(TRUSTED_URL_PREFIX)) {
+        errors.push(`sourceUrl must start with "${TRUSTED_URL_PREFIX}" — got: "${deck.sourceUrl}"`);
+      }
+    }
     
     if (deck.cards && Array.isArray(deck.cards)) {
       // Card count validation
